@@ -84,7 +84,7 @@ const ContactPage = () => {
                     Contact: {member.contact}
                   </Typography>
                   <Typography
-                    variant="body2"
+                    variant="body1"
                     sx={{ mt: 1 }}
                     color="textSecondary"
                   >
