@@ -44,7 +44,7 @@ const ContactPage = () => {
         </Box>
 
         {/* Team Member Cards */}
-        <Grid container spacing={4}>
+        <Grid container spacing={4} justifyContent="center" alignItems="center">
           {TEAM_MEMBERS.map((member) => (
             <Grid item xs={12} sm={6} md={4} key={member.id}>
               <Card
@@ -106,5 +106,7 @@ const ContactPage = () => {
     </Box>
   );
 };
+
+
 
 export default ContactPage;
