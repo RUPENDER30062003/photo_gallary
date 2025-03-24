@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import {
   Box,
@@ -83,14 +84,12 @@ export const FAQ = () => {
   };
 
   return(
-
     <Box
       sx={{
         py: 6,
         backgroundColor: '#f8f8f8',
       }}
     >
-
       <Container maxWidth="lg">
         <Typography
           variant="h4"
@@ -115,14 +114,17 @@ export const FAQ = () => {
               overflow: 'hidden',
             }}
           >
-
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
               aria-controls={`panel${faq.id}-content`}
               id={`panel${faq.id}-header`}
               sx={{
-                backgroundColor: 'white',
-                '&:hover': { backgroundColor: '#f5f5f5' },
+                backgroundColor: 'rgb(25, 118, 210)',
+                color: 'white',
+                '&:hover': { backgroundColor: 'rgb(21, 101, 192)' },
+                '& .MuiSvgIcon-root': {
+                  color: 'white',
+                }
               }}
             >
               <Typography variant="h6" sx={{ fontWeight: 500 }}>
@@ -136,8 +138,6 @@ export const FAQ = () => {
             </AccordionDetails>
           </Accordion>
         ))}
-        
-        {/* <Divider sx={{ mt: 4 }} /> */}
         
         <Box sx={{ mt: 4, textAlign: 'center' }}>
           <Typography variant="body1" sx={{ mb: 2 }}>
