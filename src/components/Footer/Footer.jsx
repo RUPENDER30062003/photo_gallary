@@ -12,6 +12,7 @@ import {
   import TwitterIcon from '@mui/icons-material/Twitter';
   import InstagramIcon from '@mui/icons-material/Instagram';
   import LinkedInIcon from '@mui/icons-material/LinkedIn';
+  import Faq from '../Faq/Faq';
   
   export  const Footer = () => {
     return (
@@ -27,6 +28,7 @@ import {
       >
         <Container maxWidth="lg">
           <Grid container spacing={3}>
+            <Faq/>
             <Grid item xs={12} md={6}>
               <Typography variant="h6" component="div" gutterBottom sx={{ fontWeight: 'bold' }}>
                 FOOTER
@@ -70,6 +72,7 @@ import {
             © {new Date().getFullYear()} Photo Gallery App. All rights reserved.
           </Typography>
         </Container>
+        
       </Box>
     );
   };

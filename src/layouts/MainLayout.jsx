@@ -9,6 +9,7 @@ import Contact from '../pages/Contact/Contact';
 
 
 
+
 const MainLayout = ({ children }) => {
   return (
     <Box
@@ -33,18 +34,25 @@ const MainLayout = ({ children }) => {
       >
         {/* {children} */}
         {
-          <Routes>
-            <Route path="/" element={<Home/>} />
-            <Route path="/about" element={<About/>} />
-            <Route path="/services" element={<Services/>} />
-            <Route path="/contact" element={<Contact/>} />
-          </Routes>
+          
+            
+            <Routes>
+              <Route path="/" element={<Home/>} />
+              <Route path="/about" element={<About/>} />
+              <Route path="/services" element={<Services/>} />
+              <Route path="/contact" element={<Contact/>} />
+            </Routes>
+          
+
+       
         }
       </Box>
       
       {/* Fixed Footer */}
       <Footer />
     </Box>
+
+
   );
 };
 
