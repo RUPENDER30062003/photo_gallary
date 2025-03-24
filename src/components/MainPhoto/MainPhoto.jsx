@@ -123,11 +123,12 @@ const MainPhoto = () => {
               color: "white",
               textShadow: "0px 0px 10px rgba(0,0,0,0.8)",
               fontWeight: "bold",
-              mb: 1,
+              mb: 2,
             }}
           >
-            Welcome to Canvas World
-          </Typography>
+Explore Properties That Match Your Lifestyle
+
+</Typography>
           
           <Typography
           variant='body1'
@@ -136,10 +137,10 @@ const MainPhoto = () => {
             textShadow: "0px 0px 10px rgba(0,0,0,0.8)",
             fontWeight: "bold",
             mb: 4,
+            // px:15
           }}
           >
-            Explore the world of art and design
-          </Typography>
+Explore a wide range of properties tailored to your unique needs, whether you're buying, selling, or renting. From luxurious apartments to cozy family homes, our expert team ensures a seamless and stress-free real estate experience          </Typography>
           
           {/* Explore button */}
           <Button
@@ -149,6 +150,7 @@ const MainPhoto = () => {
             sx={{
               fontSize: "1.2rem",
               padding: "12px 30px",
+              width:180,
               backgroundColor: "#1976d2",
               '&:hover': {
                 backgroundColor: "#115293",
