@@ -24,31 +24,7 @@ const PhotoGallery = () => {
             marginBottom: 4 
           }}
         >
-          {/* <Box
-            component="img"
-            src="/assets/images/photo1.jpg"
-            alt="Photo Gallery"
-            sx={{
-              display: "block",
-              maxWidth: "100%",
-              height: "auto" 
-            }}
-          /> */}
           
-          {/* <Typography
-            variant="h4"
-            sx={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              color: "white",
-              textShadow: "0px 0px 10px rgba(0,0,0,0.8)",
-              fontWeight: "bold",
-            }}
-          >
-            Welcome to Canvas World
-          </Typography> */}
         </Box>
 
         <Grid container spacing={2}>
