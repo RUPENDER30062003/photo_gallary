@@ -13,7 +13,7 @@ const DUMMY_PHOTOS = [
 
 const PhotoGallery = () => {
   return (
-    <Box component="section" sx={{ my: 4 }}>
+    <Box component="section" sx={{ my: 1 }}>
       <Container maxWidth="lg">
         {/* Adding Text Overlay on Image */}
         <Box 
@@ -24,7 +24,7 @@ const PhotoGallery = () => {
             marginBottom: 4 
           }}
         >
-          <Box 
+          {/* <Box
             component="img"
             src="/assets/images/photo1.jpg"
             alt="Photo Gallery"
@@ -33,8 +33,9 @@ const PhotoGallery = () => {
               maxWidth: "100%",
               height: "auto" 
             }}
-          />
-          <Typography
+          /> */}
+          
+          {/* <Typography
             variant="h4"
             sx={{
               position: "absolute",
@@ -47,7 +48,7 @@ const PhotoGallery = () => {
             }}
           >
             Welcome to Canvas World
-          </Typography>
+          </Typography> */}
         </Box>
 
         <Grid container spacing={2}>
@@ -68,4 +69,3 @@ const PhotoGallery = () => {
 };
 
 export default PhotoGallery;
-
