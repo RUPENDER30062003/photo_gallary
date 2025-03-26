@@ -11,18 +11,33 @@ import {
 } from "@mui/material";
 
 // Dummy Data for Team Members
+// const TEAM_MEMBERS = [
+//   { id: 1, name: "John Do", designation: "Full Stack Developer", linkedin: "https://www.linkedin.com/in/johndoe", contact: "+1 234-567-8901", color: "#FFC1C1" },
+//   { id: 2, name: "Jane Smith", designation: "UI/UX Designer", linkedin: "https://www.linkedin.com/in/janesmith", contact: "+1 987-654-3210", color: "#FFD59A" },
+//   { id: 3, name: "Emily Johnson", designation: "Data Scientist", linkedin: "https://www.linkedin.com/in/emilyjohnson", contact: "+1 555-123-4567", color: "#C1E1C1" },
+//   { id: 4, name: "Michael Brown", designation: "Project Manager", linkedin: "https://www.linkedin.com/in/michaelbrown", contact: "+1 444-987-6543", color: "#C1D5E0" },
+//   { id: 5, name: "Olivia Wilson", designation: "DevOps Engineer", linkedin: "https://www.linkedin.com/in/oliviawilson", contact: "+1 333-222-1111", color: "#E1C1E1" },
+//   { id: 6, name: "Liam Davis", designation: "Cloud Architect", linkedin: "https://www.linkedin.com/in/liamdavis", contact: "+1 666-123-4567", color: "#F7C8E0" },
+//   { id: 7, name: "Sophia Moore", designation: "Frontend Developer", linkedin: "https://www.linkedin.com/in/sophiamoore", contact: "+1 777-987-6543", color: "#B4E5EF" },
+//   { id: 8, name: "William Taylor", designation: "Backend Developer", linkedin: "https://www.linkedin.com/in/williamtaylor", contact: "+1 888-654-3210", color: "#FCE1A8" },
+//   { id: 9, name: "Isabella Martinez", designation: "Quality Analyst", linkedin: "https://www.linkedin.com/in/isabellamartinez", contact: "+1 999-555-1234", color: "#C8C1F7" },
+//   { id: 10, name: "James Anderson", designation: "Product Manager", linkedin: "https://www.linkedin.com/in/jamesanderson", contact: "+1 123-456-7890", color: "#E8C1C1" },
+// ];
+
+
 const TEAM_MEMBERS = [
-  { id: 1, name: "John Do", designation: "Full Stack Developer", linkedin: "https://www.linkedin.com/in/johndoe", contact: "+1 234-567-8901", color: "#FFC1C1" },
-  { id: 2, name: "Jane Smith", designation: "UI/UX Designer", linkedin: "https://www.linkedin.com/in/janesmith", contact: "+1 987-654-3210", color: "#FFD59A" },
-  { id: 3, name: "Emily Johnson", designation: "Data Scientist", linkedin: "https://www.linkedin.com/in/emilyjohnson", contact: "+1 555-123-4567", color: "#C1E1C1" },
-  { id: 4, name: "Michael Brown", designation: "Project Manager", linkedin: "https://www.linkedin.com/in/michaelbrown", contact: "+1 444-987-6543", color: "#C1D5E0" },
-  { id: 5, name: "Olivia Wilson", designation: "DevOps Engineer", linkedin: "https://www.linkedin.com/in/oliviawilson", contact: "+1 333-222-1111", color: "#E1C1E1" },
-  { id: 6, name: "Liam Davis", designation: "Cloud Architect", linkedin: "https://www.linkedin.com/in/liamdavis", contact: "+1 666-123-4567", color: "#F7C8E0" },
-  { id: 7, name: "Sophia Moore", designation: "Frontend Developer", linkedin: "https://www.linkedin.com/in/sophiamoore", contact: "+1 777-987-6543", color: "#B4E5EF" },
-  { id: 8, name: "William Taylor", designation: "Backend Developer", linkedin: "https://www.linkedin.com/in/williamtaylor", contact: "+1 888-654-3210", color: "#FCE1A8" },
-  { id: 9, name: "Isabella Martinez", designation: "Quality Analyst", linkedin: "https://www.linkedin.com/in/isabellamartinez", contact: "+1 999-555-1234", color: "#C8C1F7" },
-  { id: 10, name: "James Anderson", designation: "Product Manager", linkedin: "https://www.linkedin.com/in/jamesanderson", contact: "+1 123-456-7890", color: "#E8C1C1" },
+  { id: 1, name: "Alice Johnson", designation: "Real Estate Agent", linkedin: "https://www.linkedin.com/in/alicejohnson", contact: "+1 234-567-8901", color: "#FFC1C1" },
+  { id: 2, name: "Bob Smith", designation: "Property Consultant", linkedin: "https://www.linkedin.com/in/bobsmith", contact: "+1 987-654-3210", color: "#FFD59A" },
+  { id: 3, name: "Catherine Lee", designation: "Marketing Specialist", linkedin: "https://www.linkedin.com/in/catherinelee", contact: "+1 555-123-4567", color: "#C1E1C1" },
+  { id: 4, name: "Daniel Brown", designation: "Legal Advisor", linkedin: "https://www.linkedin.com/in/danielbrown", contact: "+1 444-987-6543", color: "#C1D5E0" },
+  { id: 5, name: "Emma Wilson", designation: "Property Manager", linkedin: "https://www.linkedin.com/in/emmawilson", contact: "+1 333-222-1111", color: "#E1C1E1" },
+  { id: 6, name: "Frank Davis", designation: "Finance Advisor", linkedin: "https://www.linkedin.com/in/frankdavis", contact: "+1 666-123-4567", color: "#F7C8E0" },
+  { id: 7, name: "Grace Moore", designation: "Interior Designer", linkedin: "https://www.linkedin.com/in/gracemoore", contact: "+1 777-987-6543", color: "#B4E5EF" },
+  { id: 8, name: "Henry Taylor", designation: "Sales Executive", linkedin: "https://www.linkedin.com/in/henrytaylor", contact: "+1 888-654-3210", color: "#FCE1A8" },
+  { id: 9, name: "Isla Martinez", designation: "Customer Support", linkedin: "https://www.linkedin.com/in/islamartinez", contact: "+1 999-555-1234", color: "#C8C1F7" },
+  { id: 10, name: "Jack Anderson", designation: "Operations Manager", linkedin: "https://www.linkedin.com/in/jackanderson", contact: "+1 123-456-7890", color: "#E8C1C1" },
 ];
+
 
 const ContactPage = () => {
   return (

@@ -76,7 +76,7 @@ const Header = () => {
     <Card>
       <CardContent>
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mb: 2 }}>
-          <Avatar sx={{ width: 64, height: 64, mb: 1 }}>
+          <Avatar sx={{ width: 64, height: 64, mb: 1 ,'&:hover':{ boxShadow: 30,} } } >
             <PersonIcon fontSize="large" />
           </Avatar>
           <Typography variant="h6">{userData.name}</Typography>
@@ -120,6 +120,7 @@ const Header = () => {
           <Typography
             variant="h6"
             noWrap
+            
             component={Link}
             to="/"
             sx={{
@@ -134,7 +135,7 @@ const Header = () => {
               marginLeft: { xs: 2, md: 20.2 },
             }}
           >
-            CANVAS
+            Horizon Estates
           </Typography>
 
           {/* Mobile navigation menu */}

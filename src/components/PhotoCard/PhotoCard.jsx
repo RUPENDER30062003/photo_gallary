@@ -11,6 +11,9 @@ const PhotoCard = ({ title, description, src, isComponent = false }) => {
         border: '1px solid',
         borderColor: 'divider',
         boxShadow: 1,
+        '&:hover':{
+                  boxShadow: 15,
+        },
       }}
     >
       {isComponent ? (
@@ -23,6 +26,8 @@ const PhotoCard = ({ title, description, src, isComponent = false }) => {
             backgroundColor: 'action.hover',
             borderBottom: '1px solid',
             borderColor: 'divider',
+            
+            
           }}
         >
           <Typography

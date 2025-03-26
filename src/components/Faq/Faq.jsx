@@ -10,39 +10,41 @@ import {
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-// Dummy FAQ data
+// Real Estate FAQ Data
 const faqData = [
-    {
+  {
       id: 1,
-      question: "What photography services do you offer?",
-      answer: "We offer a wide range of photography services including portrait photography, wedding photography, event coverage, commercial photography, and product photography. Our team of experienced photographers can cater to your specific needs and preferences."
-    },
-    {
+      question: "What services do you offer for home buyers?",
+      answer: "We provide comprehensive home buying services including property search, market analysis, negotiation support, home inspection guidance, and end-to-end transaction assistance. Our team helps you find the perfect property, navigate the buying process, and make informed decisions."
+  },
+  {
       id: 2,
-      question: "How far in advance should I book a photography session?",
-      answer: "For portrait sessions, we recommend booking at least 2-3 weeks in advance. For weddings and major events, we suggest booking 3-6 months ahead to ensure availability. For urgent requests, please contact us directly, and we'll do our best to accommodate your needs."
-    },
-    {
+      question: "How long does the home buying process typically take?",
+      answer: "The home buying process usually takes 2-3 months from start to closing. This includes getting pre-approved for a mortgage (1-2 weeks), searching for properties (4-8 weeks), making an offer, completing home inspections, and finalizing the transaction. We guide you through each step to ensure a smooth experience."
+  },
+  {
       id: 3,
-      question: "What is included in your photography packages?",
-      answer: "Our standard packages include the photography session, professional editing of selected photos, digital delivery of high-resolution images, and printing rights. Premium packages may include additional services such as physical prints, photo albums, or extended session times. Custom packages are available upon request."
-    },
-    {
+      question: "What are the costs involved in buying a home?",
+      answer: "Beyond the home's purchase price, expect additional costs such as closing costs (2-5% of home price), home inspection fees, property taxes, homeowners insurance, potential HOA fees, and moving expenses. We provide a detailed breakdown of expected costs to help you budget effectively."
+  },
+  {
       id: 4,
-      question: "Do you offer photo printing services?",
-      answer: "Yes, we offer professional photo printing services in various sizes and finishes. We work with top-quality print labs to ensure your images look stunning whether displayed on your wall or in an album. We can also recommend trusted third-party print services if you prefer."
-    },
-    {
+      question: "Do you assist with selling my property?",
+      answer: "Yes, we offer comprehensive selling services including professional home valuation, strategic pricing, professional photography, targeted marketing, home staging advice, negotiation support, and full transaction management. Our goal is to maximize your property's value and ensure a smooth selling process."
+  },
+  {
       id: 5,
-      question: "What is your cancellation policy?",
-      answer: "We understand that circumstances change. For cancellations made at least 7 days before your scheduled session, we offer a full refund of your deposit. Cancellations within 7 days of your session may result in a partial refund or credit toward a future session, depending on the circumstances."
-    },
-    {
+      question: "What is your commission structure?",
+      answer: "Our commission is typically a percentage of the final sale price, standard in the real estate industry. We offer transparent pricing and can discuss our commission structure during an initial consultation. Our fees include a full range of services designed to get you the best possible outcome."
+  },
+  {
       id: 6,
-      question: "How long does it take to receive my photos after a session?",
-      answer: "Delivery times vary based on the type of photography service. For standard portrait sessions, you can expect to receive your edited digital images within 1-2 weeks. For weddings and larger events, delivery typically takes 3-4 weeks. Rush processing is available for an additional fee if you need your photos sooner."
-    }
+      question: "How do you determine the right listing price for my home?",
+      answer: "We conduct a comprehensive Comparative Market Analysis (CMA) that considers recent sales of similar properties in your neighborhood, current market conditions, your home's unique features, recent improvements, and local economic factors. Our pricing strategy aims to attract buyers while maximizing your property's value."
+  }
 ];
+
+
 
 export const FAQ = () => {
 

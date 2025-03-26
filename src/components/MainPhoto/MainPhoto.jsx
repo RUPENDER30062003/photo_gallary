@@ -1,9 +1,7 @@
-
 import React, { useState } from 'react';
 import { 
   Box, 
   Typography, 
-  Container, 
   Grid, 
   TextField, 
   Select, 
@@ -16,31 +14,27 @@ import {
   Modal,
   IconButton,
   Fade,
-  Backdrop
+  Backdrop,
+  InputAdornment
 } from '@mui/material';
 
+import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
 
 const MainPhoto = () => {
   // State to track if modal should be shown
   const [openModal, setOpenModal] = useState(false);
   
-  // State for form fields
+  // State for search input and form fields
+  const [searchInput, setSearchInput] = useState('');
   const [formData, setFormData] = useState({
     propertyType: '',
     location: '',
     minPrice: '',
-    maxPrice: '',
-    bedrooms: '',
-    bathrooms: '',
-    propertyStatus: '',
-    minSqFt: '',
-    maxSqFt: '',
-    amenities: [],
-    keywords: ''
+    maxPrice: ''
   });
 
-  // Handle input changes
+  // Handle input changes in form
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData({
@@ -52,27 +46,14 @@ const MainPhoto = () => {
   // Handle form submission
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('Search data:', formData);
+    console.log('Search data:', { ...formData, searchInput });
     // Add your search logic here
-    
-    // Close modal after submission (optional)
-    // setOpenModal(false);
+    setOpenModal(false);
   };
 
   // Modal open/close handlers
   const handleOpenModal = () => setOpenModal(true);
   const handleCloseModal = () => setOpenModal(false);
-
-  // Amenity options
-  const amenityOptions = [
-    'Swimming Pool',
-    'Gym',
-    'Parking',
-    'Garden',
-    'Balcony',
-    'Security',
-    'Elevator'
-  ];
 
   // Modal style
   const modalStyle = {
@@ -81,7 +62,7 @@ const MainPhoto = () => {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: '90%',
-    maxWidth: 1200,
+    maxWidth: 800,
     maxHeight: '90vh',
     bgcolor: 'background.paper',
     borderRadius: 2,
@@ -92,7 +73,7 @@ const MainPhoto = () => {
 
   return (
     <>
-      {/* Full-width image with overlay text and button */}
+      {/* Full-width image with overlay text and search */}
       <Box sx={{ position: "relative", width: "100%", height: "90vh" }}>
         <Box
           component="img"
@@ -106,7 +87,7 @@ const MainPhoto = () => {
           }}
         />
         
-        {/* Welcome text overlay */}
+        {/* Welcome text and search overlay */}
         <Box
           sx={{
             position: "absolute",
@@ -126,39 +107,76 @@ const MainPhoto = () => {
               mb: 2,
             }}
           >
-Explore Properties That Match Your Lifestyle
-
-</Typography>
+            Explore Properties That Match Your Lifestyle
+          </Typography>
           
           <Typography
-          variant='body1'
-          sx={{
-            color: "white",
-            textShadow: "0px 0px 10px rgba(0,0,0,0.8)",
-            fontWeight: "bold",
-            mb: 4,
-            // px:15
-          }}
-          >
-Explore a wide range of properties tailored to your unique needs, whether you're buying, selling, or renting. From luxurious apartments to cozy family homes, our expert team ensures a seamless and stress-free real estate experience          </Typography>
-          
-          {/* Explore button */}
-          <Button
-            variant="contained"
-            size="large"
-            onClick={handleOpenModal}
+            variant='body1'
             sx={{
-              fontSize: "1.2rem",
-              padding: "12px 30px",
-              width:180,
-              backgroundColor: "#1976d2",
-              '&:hover': {
-                backgroundColor: "#115293",
-              }
+              color: "white",
+              textShadow: "0px 0px 10px rgba(0,0,0,0.8)",
+              fontWeight: "bold",
+              mb: 4,
             }}
           >
-            Explore
-          </Button>
+            Explore a wide range of properties tailored to your unique needs, 
+            whether you're buying, selling, or renting. 
+            From luxurious apartments to cozy family homes, our expert team ensures a seamless and stress-free real estate experience          
+          </Typography>
+          
+          {/* Search input */}
+          <Box sx={{ 
+            display: 'flex', 
+            justifyContent: 'center', 
+            width: '100%', 
+            maxWidth: 600, 
+            margin: '0 auto' 
+          }}>
+            <TextField
+              fullWidth
+              variant="outlined"
+              placeholder="Search properties..."
+              value={searchInput}
+              onChange={(e) => setSearchInput(e.target.value)}
+              onClick={handleOpenModal}
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <SearchIcon />
+                  </InputAdornment>
+                ),
+                sx: {
+                  backgroundColor: 'white',
+                  borderRadius: '4px',
+                  '& .MuiOutlinedInput-notchedOutline': {
+                    borderColor: 'rgba(0, 0, 0, 0.23)',
+                  },
+                  '&:hover .MuiOutlinedInput-notchedOutline': {
+                    borderColor: 'primary.main',
+                  },
+                }
+              }}
+              sx={{
+                '& .MuiInputBase-root': {
+                  height: '56px',
+                },
+              }}
+            />
+            <Button
+              variant="contained"
+              onClick={handleOpenModal}
+              sx={{
+                ml: 1,
+                height: '56px',
+                backgroundColor: "#1976d2",
+                '&:hover': {
+                  backgroundColor: "#115293",
+                }
+              }}
+            >
+              Search
+            </Button>
+          </Box>
         </Box>
       </Box>
       
@@ -201,7 +219,7 @@ Explore a wide range of properties tailored to your unique needs, whether you're
             }}>
               <form onSubmit={handleSubmit}>
                 <Grid container spacing={3}>
-                  {/* First row */}
+                  {/* First row with 4 fields */}
                   <Grid item xs={12} md={3}>
                     <FormControl fullWidth variant="outlined">
                       <InputLabel>Property Type</InputLabel>
@@ -250,117 +268,6 @@ Explore a wide range of properties tailored to your unique needs, whether you're
                       type="number"
                       variant="outlined"
                       value={formData.maxPrice}
-                      onChange={handleChange}
-                    />
-                  </Grid>
-                  
-                  {/* Second row */}
-                  <Grid item xs={6} md={2}>
-                    <FormControl fullWidth variant="outlined">
-                      <InputLabel>Bedrooms</InputLabel>
-                      <Select
-                        name="bedrooms"
-                        value={formData.bedrooms}
-                        onChange={handleChange}
-                        label="Bedrooms"
-                      >
-                        <MenuItem value="any">Any</MenuItem>
-                        <MenuItem value="1">1+</MenuItem>
-                        <MenuItem value="2">2+</MenuItem>
-                        <MenuItem value="3">3+</MenuItem>
-                        <MenuItem value="4">4+</MenuItem>
-                        <MenuItem value="5">5+</MenuItem>
-                      </Select>
-                    </FormControl>
-                  </Grid>
-                  
-                  <Grid item xs={6} md={2}>
-                    <FormControl fullWidth variant="outlined">
-                      <InputLabel>Bathrooms</InputLabel>
-                      <Select
-                        name="bathrooms"
-                        value={formData.bathrooms}
-                        onChange={handleChange}
-                        label="Bathrooms"
-                      >
-                        <MenuItem value="any">Any</MenuItem>
-                        <MenuItem value="1">1+</MenuItem>
-                        <MenuItem value="2">2+</MenuItem>
-                        <MenuItem value="3">3+</MenuItem>
-                        <MenuItem value="4">4+</MenuItem>
-                      </Select>
-                    </FormControl>
-                  </Grid>
-                  
-                  <Grid item xs={12} md={2}>
-                    <FormControl fullWidth variant="outlined">
-                      <InputLabel>Status</InputLabel>
-                      <Select
-                        name="propertyStatus"
-                        value={formData.propertyStatus}
-                        onChange={handleChange}
-                        label="Status"
-                      >
-                        <MenuItem value="for-sale">For Sale</MenuItem>
-                        <MenuItem value="for-rent">For Rent</MenuItem>
-                      </Select>
-                    </FormControl>
-                  </Grid>
-                  
-                  <Grid item xs={6} md={3}>
-                    <TextField
-                      fullWidth
-                      label="Min Sq Ft"
-                      name="minSqFt"
-                      type="number"
-                      variant="outlined"
-                      value={formData.minSqFt}
-                      onChange={handleChange}
-                    />
-                  </Grid>
-                  
-                  <Grid item xs={6} md={3}>
-                    <TextField
-                      fullWidth
-                      label="Max Sq Ft"
-                      name="maxSqFt"
-                      type="number"
-                      variant="outlined"
-                      value={formData.maxSqFt}
-                      onChange={handleChange}
-                    />
-                  </Grid>
-                  
-                  {/* Third row */}
-                  <Grid item xs={12} md={8}>
-                    <FormControl fullWidth variant="outlined">
-                      <InputLabel>Amenities</InputLabel>
-                      <Select
-                        multiple
-                        name="amenities"
-                        value={formData.amenities}
-                        onChange={(e) => setFormData({...formData, amenities: e.target.value})}
-                        input={<OutlinedInput label="Amenities" />}
-                        renderValue={(selected) => selected.join(', ')}
-                      >
-                        {amenityOptions.map((amenity) => (
-                          <MenuItem key={amenity} value={amenity}>
-                            <Checkbox checked={formData.amenities.indexOf(amenity) > -1} />
-                            {amenity}
-                          </MenuItem>
-                        ))}
-                      </Select>
-                    </FormControl>
-                  </Grid>
-                  
-                  <Grid item xs={12} md={4}>
-                    <TextField
-                      fullWidth
-                      label="Keywords"
-                      name="keywords"
-                      variant="outlined"
-                      placeholder="e.g. Sea View, Garage"
-                      value={formData.keywords}
                       onChange={handleChange}
                     />
                   </Grid>

@@ -6,27 +6,25 @@ import React from "react";
 import { Box, Container, Typography, Grid, Button, Card, CardContent, CardMedia } from "@mui/material";
 import { motion } from "framer-motion";
 
-// Expanded dummy photos data
 const DUMMY_PHOTOS = [
-  { id: 1, title: "Artistic Nature", description: "Discover breathtaking landscapes and serene beauty.", src: "/assets/images/photo5.jpg" },
-  { id: 2, title: "City Life", description: "Vibrant cityscapes that captivate your senses.", src: "/assets/images/photo6.jpg" },
-  { id: 3, title: "Wildlife Wonders", description: "Explore the wild and its untamed inhabitants.", src: "/assets/images/photo7.jpg" },
-  { id: 4, title: "Ocean Horizons", description: "Endless blues and dramatic coastal scenes.", src: "/assets/images/photo8.jpg" },
-  { id: 5, title: "Mountain Majesty", description: "Towering peaks and rugged terrain captured in stunning detail.", src: "/assets/images/photo9.jpg" },
-  { id: 6, title: "Desert Mirages", description: "The stark beauty and hidden life of arid landscapes.", src: "/assets/images/photo10.jpg" },
-  { id: 7, title: "Architectural Marvels", description: "Human ingenuity expressed through remarkable structures.", src: "/assets/images/photo11.jpg" },
-  { id: 8, title: "Seasonal Splendor", description: "The changing faces of nature throughout the year.", src: "/assets/images/photo12.jpg" },
-  { id: 9, title: "Nightscape Wonders", description: "Cities and landscapes transformed under starlight.", src: "/assets/images/photo13.jpeg" },
+  { id: 1, title: "Sunset Hills Villa", description: "Breathtaking 4-bedroom villa with panoramic sunset views and infinity pool.", src: "/assets/images/photo5.jpg" },
+  { id: 2, title: "Metropolitan Loft", description: "Sleek 2-bedroom penthouse with floor-to-ceiling windows and smart home technology.", src: "/assets/images/photo6.jpg" },
+  { id: 3, title: "Innovation Park Plaza", description: "Modern 3-floor commercial complex with flexible workspace designs.", src: "/assets/images/photo7.jpg" },
+  { id: 4, title: "Pacific Wave Residence", description: "Luxury beachfront condo with private beach access and ocean-view terraces.", src: "/assets/images/photo8.jpg" },
+  { id: 5, title: "Alpine Meadows Chalet", description: "Rustic 5-bedroom mountain home with ski resort proximity and natural stone fireplace.", src: "/assets/images/photo9.jpg" },
+  { id: 6, title: "Emerald Valley Estate", description: "Expansive countryside ranch with organic gardens and guest cottage.", src: "/assets/images/photo10.jpg" },
+  { id: 7, title: "Geometric Glass House", description: "Award-winning minimalist design with sustainable materials and integrated landscaping.", src: "/assets/images/photo11.jpg" },
+  { id: 8, title: "Harmony Grove Residence", description: "Spacious family home with open floor plan, playroom, and community park access.", src: "/assets/images/photo12.jpg" },
+  { id: 9, title: "Skyline Tower Penthouse", description: "Exclusive top-floor apartment with 360-degree city lights and rooftop entertainment area.", src: "/assets/images/photo13.jpeg" },
 ];
 
-// Expanded features data
 const FEATURES = [
-  { title: "High-Quality Images", description: "Experience top-notch visuals in full resolution." },
-  { title: "Curated Categories", description: "Organized for easy exploration and inspiration." },
-  { title: "User-Friendly Design", description: "Simple, intuitive interface for all users." },
-  { title: "Regular Updates", description: "Fresh content added weekly to keep you inspired." },
-  { title: "Mobile Optimized", description: "Perfect viewing experience on any device." },
-  { title: "Download Options", description: "Save your favorite images for offline inspiration." },
+  { title: "Strategic Locations", description: "Carefully selected properties in thriving, up-and-coming neighborhoods." },
+  { title: "Cutting-Edge Amenities", description: "Advanced technologies and lifestyle-enhancing features in every property." },
+  { title: "Personalized Solutions", description: "Flexible property options tailored to individual client preferences and needs." },
+  { title: "Integrity in Transactions", description: "Comprehensive documentation and complete transparency throughout the buying process." },
+  { title: "Professional Guidance", description: "Dedicated real estate advisors with deep market insights and client-first approach." },
+  { title: "Sustainable Living", description: "Environmentally conscious designs that reduce carbon footprint and promote energy efficiency." },
 ];
 
 const AboutPage = () => {
@@ -46,10 +44,12 @@ const AboutPage = () => {
             transition={{ duration: 0.8 }}
           >
             <Typography variant="h3" fontWeight="bold" gutterBottom>
-              About Canvas World
+              About Horizon Estates
             </Typography>
             <Typography variant="body1" color="textSecondary" sx={{ maxWidth: 600, mx: "auto" }}>
-              Canvas World is your personal gateway to stunning visual storytelling. From awe-inspiring landscapes to vibrant cityscapes, explore a curated gallery of breathtaking photography.
+              Horizon Estates is your premier gateway to exceptional property experiences. From luxurious beachfront villas to innovative urban apartments, we curate an exclusive collection of distinctive properties that transform living spaces into extraordinary lifestyles. Our carefully selected portfolio represents the pinnacle of architectural design, comfort, and location.
+              We go beyond traditional real estate by offering more than just properties – we provide keys to dreams, opportunities, and life-changing environments. Each property in our collection tells a unique story, crafted to meet the diverse aspirations of discerning homeowners and investors.
+              Whether you're seeking a serene mountain retreat, a dynamic city penthouse, or a spacious family home, Horizon Estates connects you with properties that inspire, comfort, and elevate your living experience. Our commitment to quality, transparency, and personalized service ensures that your journey to finding the perfect property is as exceptional as the spaces we showcase.
             </Typography>
           </motion.div>
         </Box>

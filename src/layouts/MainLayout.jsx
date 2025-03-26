@@ -19,20 +19,20 @@ const MainLayout = ({ children }) => {
         minHeight: '100vh',
       }}
     >
-      {/* Fixed Header */}
+
       <Header />
       
-      {/* Main Content Area */}
+
       <Box
         component="main"
         sx={{
           flexGrow: 1,
           width: '100%',
-          padding: { xs: 2, md: 4 },
-          marginTop: -5,
+          // padding: { xs: 2, md: 4 },
+          // marginTop: -5,
         }}
       >
-        {/* {children} */}
+
         {
           
             
@@ -42,13 +42,10 @@ const MainLayout = ({ children }) => {
               <Route path="/services" element={<Services/>} />
               <Route path="/contact" element={<Contact/>} />
             </Routes>
-          
-
-       
         }
       </Box>
       
-      {/* Fixed Footer */}
+
       <Footer />
     </Box>
 
